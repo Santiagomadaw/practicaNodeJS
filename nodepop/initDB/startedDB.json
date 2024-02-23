@@ -1,0 +1,192 @@
+[
+    {
+        "nombre": "Cámara clásica Nikon F3",
+        "venta": true,
+        "precio": 350,
+        "foto": "nikon_f3.jpg",
+        "tags": [
+            "work",
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Teléfono móvil Nokia 3310",
+        "venta": false,
+        "precio": 50,
+        "foto": "nokia_3310.jpg",
+        "tags": [
+            "mobile",
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Consola clásica Nintendo Entertainment System (NES)",
+        "venta": true,
+        "precio": 200,
+        "foto": "nes.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Juego Super Mario Bros",
+        "venta": true,
+        "precio": 30,
+        "foto": "super_mario_bros.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Cámara clásica Leica M3",
+        "venta": true,
+        "precio": 1200,
+        "foto": "leica_m3.jpg",
+        "tags": [
+            "work",
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Teléfono móvil Motorola Razr V3",
+        "venta": false,
+        "precio": 80,
+        "foto": "motorola_razr_v3.jpg",
+        "tags": [
+            "mobile",
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Consola clásica Atari 2600",
+        "venta": true,
+        "precio": 100,
+        "foto": "atari_2600.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Juego Pac-Man",
+        "venta": true,
+        "precio": 20,
+        "foto": "pacman.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Cámara clásica Canon AE-1",
+        "venta": true,
+        "precio": 250,
+        "foto": "canon_ae1.jpg",
+        "tags": [
+            "work",
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Teléfono móvil BlackBerry Curve 8520",
+        "venta": false,
+        "precio": 40,
+        "foto": "blackberry_curve_8520.jpg",
+        "tags": [
+            "mobile",
+            "work"
+        ]
+    },
+    {
+        "nombre": "Consola clásica Sega Mega Drive (Genesis)",
+        "venta": true,
+        "precio": 150,
+        "foto": "sega_mega_drive.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Juego The Legend of Zelda",
+        "venta": true,
+        "precio": 40,
+        "foto": "legend_of_zelda.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Cámara clásica Pentax K1000",
+        "venta": true,
+        "precio": 180,
+        "foto": "pentax_k1000.jpg",
+        "tags": [
+            "work",
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Teléfono móvil Sony Ericsson T610",
+        "venta": false,
+        "precio": 35,
+        "foto": "sony_ericsson_t610.jpg",
+        "tags": [
+            "mobile",
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Consola clásica Super Nintendo Entertainment System (SNES)",
+        "venta": true,
+        "precio": 180,
+        "foto": "snes.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Juego Tetris",
+        "venta": true,
+        "precio": 15,
+        "foto": "tetris.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Cámara clásica Minolta X-700",
+        "venta": true,
+        "precio": 300,
+        "foto": "minolta_x700.jpg",
+        "tags": [
+            "work",
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Teléfono móvil Siemens S55",
+        "venta": false,
+        "precio": 25,
+        "foto": "siemens_s55.jpg",
+        "tags": [
+            "mobile",
+            "work"
+        ]
+    },
+    {
+        "nombre": "Consola clásica PlayStation 1 (PS1)",
+        "venta": true,
+        "precio": 120,
+        "foto": "ps1.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "nombre": "Juego Sonic the Hedgehog",
+        "venta": true,
+        "precio": 25,
+        "foto": "sonic_the_hedgehog.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    }
+]
