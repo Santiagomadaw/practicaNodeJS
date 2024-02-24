@@ -3,10 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const connection = require('./lib/connectMogoose')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-require('./lib/connectMongoose');
+var apiRouter = require('./routes/api/ads');
+
 var app = express();
 
 // view engine setup
@@ -21,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //rutas de la API
 
-app.use('/api/ads', require('./routes/api/ads'));
+app.use('/api/anuncio', apiRouter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

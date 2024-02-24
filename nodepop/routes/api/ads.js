@@ -1,15 +1,21 @@
 var express = require('express');
 var router = express.Router();
-const Ads = require('../../model/Ads');
+const Ad =require('../../model/Ads');
 
-//GET /api/anuncios (devolvera una lista de anuncios)
+/* GET users listing. */
+router.get('/', async function(req, res, next) {
 
-router.get('/', async function (req, res, next) {
-    try {
-        const ads = await Ads.find();
-        res.json({ results: ads });
-    } catch (error) {
-        next(error)
-    }
+try {
+    const filterBySell = req.query.sell
+    const start = req.query.start
+    const step = req.query.step
+    const filter = {}
+    filter.sell=filterBySell
+    const ads = await Ad.show(filter, start, step)
+    res.json({result:ads});
+} catch (error) {
+    next(error)
+}   
 });
+
 module.exports = router;

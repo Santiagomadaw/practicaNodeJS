@@ -24,7 +24,7 @@ async function initAd() {
                 "name": "Cámara clásica Nikon F3",
                 "sell": true,
                 "price": 350,
-                "photo": "nikon_f3.jpg",
+                "photo": "Nikon_F3.png",
                 "tags": ["work", "lifestyle"]
             },
             {
@@ -70,7 +70,7 @@ async function initAd() {
                 "tags": ["lifestyle"]
             },
             {
-                "name": "Juego Pac-Man",
+                "name": "Juego Pac-Man PS1",
                 "sell": true,
                 "price": 20,
                 "photo": "pacman.jpg",
@@ -112,10 +112,10 @@ async function initAd() {
                 "tags": ["work", "lifestyle"]
             },
             {
-                "name": "Teléfono móvil Sony Ericsson T610",
+                "name": "Teléfono móvil Sony Ericsson T10s",
                 "sell": false,
                 "price": 35,
-                "photo": "sony_ericsson_t610.jpg",
+                "photo": "sony_ericsson_t10s.jpg",
                 "tags": ["mobile", "lifestyle"]
             },
             {
@@ -154,7 +154,7 @@ async function initAd() {
                 "tags": ["lifestyle"]
             },
             {
-                "name": "Juego Sonic the Hedgehog",
+                "name": "Juego Sonic the Hedgehog (Mega Drive)",
                 "sell": true,
                 "price": 25,
                 "photo": "sonic_the_hedgehog.jpg",
