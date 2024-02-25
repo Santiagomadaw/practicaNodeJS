@@ -5,9 +5,16 @@ const Ad =require('../model/Ads');
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
-  const data = await Ad.find()
-  const title = 'Nodepop'
-  res.render('index', {title, data });
+  try {
+    const filters= await Ad.filter(req.query)
+    const data = await Ad.show(filters[0],filters[1],filters[2])
+    const title = 'Nodepop'
+    res.render('index', {title, data });
+  } catch (error) {
+    next(error)
+  }
+  
+
 });
 
 module.exports = router;

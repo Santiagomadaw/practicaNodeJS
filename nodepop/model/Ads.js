@@ -14,12 +14,45 @@ const adSchema = mongoose.Schema({
 adSchema.statics.show = function(filter,start,step){
 
     const query = Ad.find(filter);
-    query.skip(start);
-    query.limit(step);
+    if(start){
+    query.skip(start)}
+    if(step){
+    query.limit(step);}
     return query.exec()
     
 }
 
+adSchema.statics.filter = function(query){
+    const filterBySell = query.sell
+    const filterBytag = query.tags
+    const minprice = query.min
+    const maxprice = query.max
+    const start = query.start
+    const step = query.step
+    console.log(filterBytag)
+
+
+    const filter = {}
+
+if (filterBySell){
+    filter.sell=filterBySell
+
+}
+if (minprice){ 
+    filter.price= { $gt: minprice }
+
+}
+if (maxprice){ 
+    filter.price= { $lt: maxprice }
+}
+if (minprice && maxprice){ 
+    filter.price= { $gt: minprice,$lt: maxprice }
+}
+if (filterBytag){
+    filter.tags = filterBytag
+}
+return ([filter,start,step])
+}
 
 
 
