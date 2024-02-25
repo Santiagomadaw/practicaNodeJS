@@ -2,10 +2,29 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <header class="header">
+      <h1 class="title"><%= title %></h1>
+    </header>
+    <main class="main">
+      <% data.forEach(ad => { %>
+      <div class="ad">
+        <div class="image"><img src="./images/<%= ad.photo %>" alt="" srcset="" /></div>
+        <div class="text">
+          <h2><%= ad.name %></h2>
+          <h3>
+            <% if(ad.sell){ %> Se vende por <% } else { %> Se compra por <% } %>
+            <%= ad.price %> €
+          </h3>
+        </div>
+      </div>
+      <% }); %>
+    </main>
+    <footer class="footer"></footer>
     <p>Welcome to <%= title %></p>
+
+    
   </body>
 </html>
