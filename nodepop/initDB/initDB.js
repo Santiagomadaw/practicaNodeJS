@@ -35,10 +35,10 @@ async function initAd() {
                 "tags": ["mobile", "lifestyle"]
             },
             {
-                "nombre": "Vintage Motorcycle - Harley-Davidson Sportster",
-                "venta": true,
-                "precio": 12000,
-                "foto": "harley_davidson_sportster.jpg",
+                "name": "Vintage Motorcycle - Harley-Davidson Sportster",
+                "sell": true,
+                "price": 12000,
+                "photo": "harley_davidson_sportster.jpg",
                 "tags": ["motor", "lifestyle"]
             },
             {
@@ -49,10 +49,10 @@ async function initAd() {
                 "tags": ["lifestyle"]
             },
             {
-                "nombre": "Classic Car - Volkswagen Beetle",
-                "venta": true,
-                "precio": 15000,
-                "foto": "volkswagen_beetle.jpg",
+                "name": "Classic Car - Volkswagen Beetle",
+                "sell": true,
+                "price": 15000,
+                "photo": "volkswagen_beetle.jpg",
                 "tags": ["motor", "lifestyle"]
             },
             {
@@ -70,10 +70,10 @@ async function initAd() {
                 "tags": ["work", "lifestyle"]
             },
             {
-                "nombre": "Legendary Motorcycle - Honda CB750",
-                "venta": true,
-                "precio": 8000,
-                "foto": "honda_cb750.jpg",
+                "name": "Legendary Motorcycle - Honda CB750",
+                "sell": true,
+                "price": 8000,
+                "photo": "honda_cb750.jpg",
                 "tags": ["motor", "lifestyle"]
             },
             {
@@ -91,10 +91,10 @@ async function initAd() {
                 "tags": ["lifestyle"]
             },
             {
-                "nombre": "Classic Car - Chevrolet Camaro",
-                "venta": false,
-                "precio": 25000,
-                "foto": "chevrolet_camaro.jpg",
+                "name": "Classic Car - Chevrolet Camaro",
+                "sell": false,
+                "price": 25000,
+                "photo": "chevrolet_camaro.jpg",
                 "tags": ["motor", "lifestyle"]
             },
             {
@@ -119,10 +119,10 @@ async function initAd() {
                 "tags": ["mobile", "work"]
             },
             {
-                "nombre": "Vintage Motorcycle - Triumph Bonneville",
-                "venta": false,
-                "precio": 10000,
-                "foto": "triumph_bonneville.jpg",
+                "name": "Vintage Motorcycle - Triumph Bonneville",
+                "sell": false,
+                "price": 10000,
+                "photo": "triumph_bonneville.jpg",
                 "tags": ["motor", "lifestyle"]
             },
             {
