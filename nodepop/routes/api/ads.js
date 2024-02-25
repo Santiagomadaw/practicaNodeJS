@@ -12,6 +12,16 @@ router.get('/', async function (req, res, next) {
         next(error)
     }
 })
+
+router.get('/tags', async function (req, res, next) {
+    try {
+        
+        const ads = await Ad.distinct('tags')
+        res.json({ result: ads })
+    } catch (error) {
+        next(error)
+    }
+})
 //PUT modificar un anuncio
 router.put('/:id', async (req, res, next) => {
     try {

@@ -35,11 +35,25 @@ async function initAd() {
                 "tags": ["mobile", "lifestyle"]
             },
             {
+                "nombre": "Vintage Motorcycle - Harley-Davidson Sportster",
+                "venta": true,
+                "precio": 12000,
+                "foto": "harley_davidson_sportster.jpg",
+                "tags": ["motor", "lifestyle"]
+            },
+            {
                 "name": "Consola clásica Nintendo Entertainment System (NES)",
                 "sell": true,
                 "price": 200,
                 "photo": "nes.jpg",
                 "tags": ["lifestyle"]
+            },
+            {
+                "nombre": "Classic Car - Volkswagen Beetle",
+                "venta": true,
+                "precio": 15000,
+                "foto": "volkswagen_beetle.jpg",
+                "tags": ["motor", "lifestyle"]
             },
             {
                 "name": "Juego Super Mario Bros",
@@ -56,6 +70,13 @@ async function initAd() {
                 "tags": ["work", "lifestyle"]
             },
             {
+                "nombre": "Legendary Motorcycle - Honda CB750",
+                "venta": true,
+                "precio": 8000,
+                "foto": "honda_cb750.jpg",
+                "tags": ["motor", "lifestyle"]
+            },
+            {
                 "name": "Teléfono móvil Motorola Razr V3",
                 "sell": false,
                 "price": 80,
@@ -68,6 +89,13 @@ async function initAd() {
                 "price": 100,
                 "photo": "atari_2600.jpg",
                 "tags": ["lifestyle"]
+            },
+            {
+                "nombre": "Classic Car - Chevrolet Camaro",
+                "venta": false,
+                "precio": 25000,
+                "foto": "chevrolet_camaro.jpg",
+                "tags": ["motor", "lifestyle"]
             },
             {
                 "name": "Juego Pac-Man PS1",
@@ -89,6 +117,13 @@ async function initAd() {
                 "price": 40,
                 "photo": "blackberry_curve_8520.jpg",
                 "tags": ["mobile", "work"]
+            },
+            {
+                "nombre": "Vintage Motorcycle - Triumph Bonneville",
+                "venta": false,
+                "precio": 10000,
+                "foto": "triumph_bonneville.jpg",
+                "tags": ["motor", "lifestyle"]
             },
             {
                 "name": "Consola clásica Sega Mega Drive (Genesis)",

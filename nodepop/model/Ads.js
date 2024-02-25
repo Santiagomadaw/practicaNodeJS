@@ -29,30 +29,46 @@ adSchema.statics.filter = function(query){
     const maxprice = query.max
     const start = query.start
     const step = query.step
-    console.log(filterBytag)
-
-
+    const filterByName = query.tittle
+    const filterByNameStart = query.tittleStart
+    const filterByPrice = query.price
+    
     const filter = {}
-
-if (filterBySell){
-    filter.sell=filterBySell
-
-}
-if (minprice){ 
-    filter.price= { $gt: minprice }
-
-}
-if (maxprice){ 
-    filter.price= { $lt: maxprice }
-}
-if (minprice && maxprice){ 
-    filter.price= { $gt: minprice,$lt: maxprice }
-}
-if (filterBytag){
-    filter.tags = filterBytag
-}
-return ([filter,start,step])
-}
+    //filtro por anuncios que incluyen en cualqueir parte una determinada cadena de caracteres
+    if (filterByName){
+        console.log(filterByName)
+        filter.name = new RegExp(`${filterByName}`, "i")
+        console.log(filter)
+    }
+    //filtro por anuncios que empiezan por una determinada cadena de caracteres
+    if (filterByNameStart){
+        console.log(filterByName)
+        filter.name = new RegExp(`^${filterByNameStart}`, "i")
+        console.log(filter)
+    }
+    //filtro por tipo de anuncio compra o venta
+    if (filterBySell){
+        filter.sell=filterBySell
+    }
+    //filtro por precio maximo y minimo
+    if (minprice){ 
+        filter.price = {}
+        filter.price.$gte= minprice 
+    }
+    if (maxprice){
+        filter.price = filter.price || {};
+        filter.price.$lte= maxprice
+    }
+    //filtro por precio fijo
+    if (filterByPrice) {
+        filter.price = filterByPrice
+    }
+    //filtro por tags
+    if (filterBytag){
+        filter.tags = filterBytag
+    }
+    return ([filter,start,step])
+    }
 
 
 
