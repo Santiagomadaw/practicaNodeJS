@@ -5,7 +5,6 @@ const Ad = require("../../model/Ads");
 /* GET anuncios filtrados. */
 router.get("/", async (req, res, next) => {
     try {
-        
         const ads = await Ad.filter(req.query);
         res.json({result: ads});
     } catch (error) {
