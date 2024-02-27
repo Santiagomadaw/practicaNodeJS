@@ -1,67 +1,61 @@
-var express = require('express');
-var router = express.Router();
-const Ad = require('../../model/Ads');
 
+const express = require("express");
+const router = express.Router();
+const Ad = require("../../model/Ads");
 /* GET anuncios filtrados. */
-router.get('/', async function (req, res, next) {
-    try {
-        const filters = await Ad.filter(req.query)
-        const ads = await Ad.show(filters[0], filters[1], filters[2])
-        res.json({ result: ads })
-    } catch (error) {
-        next(error)
-    }
-})
-
-router.get('/tags', async function (req, res, next) {
+router.get("/", async (req, res, next) => {
     try {
         
-        const ads = await Ad.distinct('tags')
-        res.json({ result: ads })
-    } catch (error) {
-        next(error)
-    }
-})
-//PUT modificar un anuncio
-router.put('/:id', async (req, res, next) => {
-    try {
-        const id = req.params.id
-        const data = req.body
-        //option.true devuelve el elemento despues de modificado, false el no modificado
-        const updatedAd = await Ad.findByIdAndUpdate(id, data, { new: true })
-
-        res.json({ result: updatedAd })
-
+        const ads = await Ad.filter(req.query);
+        res.json({result: ads});
     } catch (error) {
         next(error);
     }
-
-
+});
+// GET listado de tags en los anuncios.
+router.get("/tags", async (req, res, next) => {
+    try {
+        const ads = await Ad.distinct("tags");
+        res.json({result: ads});
+    } catch (error) {
+        next(error);
+    }
+});
+// PUT modificar un anuncio
+router.put("/:id", async (req, res, next) => {
+    try {
+        const {id} = req.params;
+        const data = req.body;
+        // option: true devuelve el elemento despues de modificado
+        // option: false el no modificado
+        const updatedAd = await Ad.findByIdAndUpdate(id, data, {new: true});
+        res.json({result: updatedAd});
+    } catch (error) {
+        next(error);
+    }
 });
 // POST para agregar nuevos documentos a la base de datos
-router.post('/', async (req, res, next) => {
+router.post("/", async (req, res, next) => {
     try {
-        const data = req.body
+        const data = req.body;
         // se crea una instancia anuncio
-        const ad = new AD(data)
+        const ad = new Ad(data);
         // se guarda en la base de datos
-        const savedAd = await ad.save()
-        res.json({ result: savedAd })
+        const savedAd = await ad.save();
+        res.json({result: savedAd});
     } catch (error) {
-        next(error)
+        next(error);
     }
 });
 // DELETE para borrar anuncios a la base de datos
-
-router.delete('/:id', async (req, res, next) => {
+router.delete("/:id", async (req, res, next) => {
     try {
-        const id = req.params.id
-        //borra un anuncio por id, aqui no tenemos nada que devolver
-        await Ad.deleteOne({ _id: id })
-        res.json()
+        const {id} = req.params;
+        // borra un anuncio por id, aqui no tenemos nada que devolver
+        await Ad.deleteOne({_id: id});
+        res.json();
     } catch (error) {
-        next(error)
+        next(error);
     }
-})
-
+});
 module.exports = router;
