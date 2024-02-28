@@ -3,10 +3,12 @@ const mongoose = require("mongoose");
 // defino el esquema de anuncios
 const adSchema = mongoose.Schema({
     name: {type:String,required:true},
-    sell: {type:Boolean,required:true},
-    price: {type:Number,required:true},
+    sell: {type:Boolean,required:true,},
+    price: {type:Number,required:true,},
     photo: {type:String,required:true},
-    tags: {type:[String],required:true},
+    tags: {type:[String],required:true,enum: {
+        values: ["lifestyle", "mobile", "motor", "work"],
+    }},
 });
 
 // metodo para mostrar los anuncios
