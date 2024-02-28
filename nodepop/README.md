@@ -9,11 +9,13 @@
 3. 📄 Configura la conexión a tu base de datos MongoDB`.
 4. 🏃‍♂️ Ejecuta el servidor con `npm run initDB` para inicializar la base de datos.
 
-    **`ATENCION: ESTE PROCESO BORRA LOS DATOS PREVIOS EN LA BASE DE DATOS.`**
+    **`ATENCIÓN: ESTE PROCESO BORRA LOS DATOS PREVIOS EN LA BASE DE DATOS.`**
 
 5. Para desarrollo ejecuta `npm run dev` para despliegue `npm run start`
 
-## Uso
+# Uso
+
+## API
 
 La API consta de los siguientes endpoints:
 <details>
@@ -24,18 +26,18 @@ Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 
 #### Parámetros de consulta
 
-- `min` Precio minimo buscado (numero).
-- `max` Precio maximo buscado (numero).
-- `prize` Precio exacto buscado (numero) Este parametro no es compatible con min y max.
+- `min` Precio mínimo buscado (número).
+- `max` Precio máximo buscado (número).
+- `prize` Precio exacto buscado (numero) Este parámetro no es compatible con min y max.
 - `sell` Tipo de anuncio  compra o venta (boolean).
-- `tags` busquedad por tags (texto). Se puede usar varias veces (ej. ?tag=mobile&tag=work).
-- `tittleStart` Busca anuncios que empiezan por un deteminado texto (texto).
-- `tittle` Busca anuncios que contienen un deteminado texto (texto).
+- `tags` busqueda por tags (texto). Se puede usar varias veces (ej. ?tag=mobile&tag=work).
+- `tittleStart` Busca anuncios que empiezan por un determinado texto (texto).
+- `tittle` Busca anuncios que contienen un determinado texto (texto).
 
 #### Paginaciòn
 
-- `star` Primer articulo mostrado (numero).
-- `step` Numero de articulos mostrados (numero).
+- `star` Primer artículo mostrado (número).
+- `step` Número de artículos mostrados (número).
 
 
 #### 🟢 Ejemplo
@@ -48,7 +50,7 @@ Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 
 ##### Code `200`
 
-###### Consulta realizada con exito
+###### Consulta realizada con éxito
 
 >```json
 >
@@ -90,11 +92,11 @@ Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 
 ###### No encontrado
 
-```json
-{
-    "error": "Not Found"
-}
-```
+>```json
+>{
+>    "error": "Not Found"
+>}
+>```
 
 #### 🟢 Ejemplo
 
@@ -131,7 +133,7 @@ Obtiene una lista de tags incluidos en los anuncios.
 
 ##### Code `200`
 
-###### Consulta realizada con exito
+###### Consulta realizada con éxito
 
 >```json
 >    {"result":
@@ -154,11 +156,11 @@ Obtiene una lista de tags incluidos en los anuncios.
 
 ###### No encontrado
 
-```json
-{
-    "error": "Not Found"
-}
-```
+>```json
+>{
+>    "error": "Not Found"
+>}
+>```
 
 </details>
 
@@ -167,7 +169,7 @@ Obtiene una lista de tags incluidos en los anuncios.
 
 ### **`PUT` /api/anuncios/:id**
 
-Modifica un anuncio pasando el id como parametro
+Modifica un anuncio pasando el id como parámetro
 
 #### 🟢 Ejemplo
 
@@ -196,7 +198,7 @@ Modifica un anuncio pasando el id como parametro
 
 ##### Code `200`
 
-###### Actualización realizada con exito
+###### Actualización realizada con éxito
 
 #### 🟢 Resultado
 
@@ -225,11 +227,11 @@ Modifica un anuncio pasando el id como parametro
 
 ###### No encontrado
 
-```json
-{
-    "error": "Not Found"
-}
-```
+>```json
+>{
+>    "error": "Not Found"
+>}
+>```
 
 #### 🟢 Ejemplo
 
@@ -239,11 +241,11 @@ Modifica un anuncio pasando el id como parametro
 
 ###### Error de validación
 
-```json
-{
-    "error": "Not valid - field price in body must be numeric"
-}
-```
+>```json
+>{
+>    "error": "Not valid - field price in body must be numeric"
+>}
+>```
 
  </details>
 <details>
@@ -255,23 +257,20 @@ Este endpoint añade un nuevo anuncio siguiendo el siguiente esquema.
 
 ### 🟢 Schema
 
-```javascript
-Schema({
-    name: {type:String,required:true},
-    sell: {type:Boolean,required:true,},
-    price: {type:Number,required:true,},
-    photo: {type:String,required:true},
-    tags: {type:[String],required:true,enum: {
-        values: ["lifestyle", "mobile", "motor", "work"],
-    }},
-});
-```
+>```javascript
+>Schema({
+>    name: {type:String,required:true},
+>    sell: {type:Boolean,required:true,},
+>    price: {type:Number,required:true,},
+>    photo: {type:String,required:true},
+>    tags: {type:[String],required:true,enum: {
+>        values: ["lifestyle", "mobile", "motor", "work"],
+>    }},
+>});
+>```
 
 #### 🟢 Ejemplo
 
-> ```
->  http://localhost:3000/api/anuncio/
-> ```
 
 >![alt text](image-1.png)
 
@@ -305,11 +304,11 @@ Schema({
 
 ###### No encontrado
 
-```json
-{
-    "error": "Not Found"
-}
-```
+>```json
+>{
+>    "error": "Not Found"
+>}
+>```
 
 #### 🟢 Ejemplo
 
@@ -319,12 +318,11 @@ Schema({
 
 ###### Error de validación
 
-```json
-{
-    "error": "Not valid - field price in body must be numeric"
-}
-```
-
+>```json
+>{
+>    "error": "Not valid - field price in body must be numeric"
+>}
+>```
 
 </details>
 <details>
@@ -336,40 +334,36 @@ Elimina un anuncio de la base de datos recibiendo por parametro el id del anunci
 
 #### 🟢 Ejemplo
 
-> ```
->  http://localhost:3000/api/anuncio/65dd20908de6e1742cab1ac4
-> ```
 >![alt text](image-2.png)
 
 #### 🟢 Resultado
 
-> Este metodo no devuelve nada
+> Este método no devuelve nada
 
 </details>
 
-
-# Website
+## Website
 
 <details>
- <summary><code>GET</code> <code><b>/api/anuncios</b></code> <code>(Obtiene una lista de anuncios filtrados.)</code></summary>
+ <summary><code>GET</code> <code><b>/</b></code> <code>(Obtiene una lista de anuncios filtrados.)</code></summary>
 
 ### **`GET` /**
 Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 
 #### Parámetros de consulta
 
-- `min` Precio minimo buscado (numero).
-- `max` Precio maximo buscado (numero).
-- `prize` Precio exacto buscado (numero) Este parametro no es compatible con min y max.
+- `min` Precio mínimo buscado (número).
+- `max` Precio máximo buscado (número).
+- `prize` Precio exacto buscado (numero) Este parámetro no es compatible con min y max.
 - `sell` Tipo de anuncio  compra o venta (boolean).
-- `tags` busquedad por tags (texto). Se puede usar varias veces (ej. ?tag=mobile&tag=work).
-- `tittleStart` Busca anuncios que empiezan por un deteminado texto (texto).
-- `tittle` Busca anuncios que contienen un deteminado texto (texto).
+- `tags` busqueda por tags (texto). Se puede usar varias veces (ej. ?tag=mobile&tag=work).
+- `tittleStart` Busca anuncios que empiezan por un determinado texto (texto).
+- `tittle` Busca anuncios que contienen un determinado texto (texto).
 
 #### Paginaciòn
 
-- `star` Primer articulo mostrado (numero).
-- `step` Numero de articulos mostrados (numero).
+- `star` Primer artículo mostrado (número).
+- `step` Número de artículos mostrados (número).
 
 
 #### 🟢 Ejemplo

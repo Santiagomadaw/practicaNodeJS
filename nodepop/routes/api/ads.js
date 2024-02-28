@@ -1,11 +1,11 @@
 
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const Ad = require("../../model/Ads");
-const { validationResult } = require("express-validator");
-const validate = require("../../lib/validation");
+const Ad = require('../../model/Ads');
+const { validationResult } = require('express-validator');
+const validate = require('../../lib/validation');
 /* GET anuncios filtrados. */
-router.get("/",validate.queryValidator, async (req, res, next) => {
+router.get('/',validate.queryValidator, async (req, res, next) => {
     try {
         validationResult(req).throw(); // lanza excepción si hay errores de validación
 
@@ -16,10 +16,10 @@ router.get("/",validate.queryValidator, async (req, res, next) => {
     }
 });
 // GET listado de tags en los anuncios.
-router.get("/tags", async (req, res, next) => {
+router.get('/tags', async (req, res, next) => {
     try {
 
-        const ads = await Ad.distinct("tags");
+        const ads = await Ad.distinct('tags');
         res.json({ result: ads });
     } catch (error) {
 
@@ -27,7 +27,7 @@ router.get("/tags", async (req, res, next) => {
     }
 });
 // PUT modificar un anuncio
-router.put("/:id", validate.bodyValidator, async (req, res, next) => {
+router.put('/:id', validate.bodyValidator, async (req, res, next) => {
     try {
         validationResult(req).throw(); // lanza excepción si hay errores de validación
         const { id } = req.params;
@@ -41,7 +41,7 @@ router.put("/:id", validate.bodyValidator, async (req, res, next) => {
     }
 });
 // POST para agregar nuevos documentos a la base de datos
-router.post("/", validate.bodyValidatorAll, async (req, res, next) => {
+router.post('/', validate.bodyValidatorAll, async (req, res, next) => {
     try {
         validationResult(req).throw();
         // lanza excepción si hay errores de validación
@@ -56,7 +56,7 @@ router.post("/", validate.bodyValidatorAll, async (req, res, next) => {
     }
 });
 // DELETE para borrar anuncios a la base de datos
-router.delete("/:id", async (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
     try {
         const { id } = req.params;
         // borra un anuncio por id, aqui no tenemos nada que devolver

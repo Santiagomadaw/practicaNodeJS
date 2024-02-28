@@ -1,18 +1,18 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-// defino el esquema de anuncios
+// Defino el esquema de anuncios
 const adSchema = mongoose.Schema({
-    name: {type:String,required:true},
-    sell: {type:Boolean,required:true,},
-    price: {type:Number,required:true,},
-    photo: {type:String,required:true},
-    tags: {type:[String],required:true,enum: {
-        values: ["lifestyle", "mobile", "motor", "work"],
+    name: {type: String, required: true},
+    sell: {type: Boolean, required: true},
+    price: {type: Number, required: true},
+    photo: {type: String, required: true},
+    tags: {type: [String], required: true, enum: {
+        values: ['lifestyle', 'mobile', 'motor', 'work'],
     }},
 });
 
 // metodo para mostrar los anuncios
-adSchema.statics.show = function (filter, start, step) {
+adSchema.statics.show = function(filter, start, step) {
     const query = Ad.find(filter);
     if (start) {
         query.skip(start);
@@ -23,7 +23,7 @@ adSchema.statics.show = function (filter, start, step) {
     return query.exec();
 };
 
-adSchema.statics.filter = function (query) {
+adSchema.statics.filter = function(query) {
     const filterBySell = query.sell;
     const filterBytag = query.tags;
     const minprice = query.min;
@@ -31,18 +31,18 @@ adSchema.statics.filter = function (query) {
     const filterByPrice = query.price;
     const filterByName = query.tittle;
     const filterByNameStart = query.tittleStart;
-    const { start } = query;
-    const { step } = query;
+    const {start} = query;
+    const {step} = query;
 
     const filter = {};
     // filtro por anuncios que incluyen en cualquier parte una
     // determinada cadena de caracteres
     if (filterByName) {
-        filter.name = new RegExp(`${filterByName}`, "i");
+        filter.name = new RegExp(`${filterByName}`, 'i');
     }
     // filtro por anuncios que empiezan por una determinada cadena de caracteres
     if (filterByNameStart) {
-        filter.name = new RegExp(`^${filterByNameStart}`, "i");
+        filter.name = new RegExp(`^${filterByNameStart}`, 'i');
     }
     // filtro por tipo de anuncio compra o venta
     if (filterBySell) {
@@ -65,11 +65,11 @@ adSchema.statics.filter = function (query) {
     if (filterBytag) {
         filter.tags = filterBytag;
     }
-    return  Ad.show(filter, start, step);
+    return Ad.show(filter, start, step);
 };
 
 // creo modelo anuncio
-const Ad = mongoose.model("Ad", adSchema);
+const Ad = mongoose.model('Ad', adSchema);
 
 // exporto el modelo
 
