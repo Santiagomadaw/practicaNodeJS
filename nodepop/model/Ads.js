@@ -63,7 +63,7 @@ adSchema.statics.filter = function(query) {
     }
     // filtro por tags
     if (filterBytag) {
-        filter.tags = filterBytag;
+        filter.tags = {$all:filterBytag};
     }
     return Ad.show(filter, start, step);
 };

@@ -6,7 +6,8 @@
 
 1. 💻 Clona este repositorio en tu máquina local.
 2. 👨‍💻 Instala las dependencias utilizando `npm install`.
-3. 📄 Configura la conexión a tu base de datos MongoDB`.
+3. 📄 Configura la conexión a tu base de datos `MongoDB`.
+    'mongodb://127.0.0.1:27017/'
 4. 🏃‍♂️ Ejecuta el servidor con `npm run initDB` para inicializar la base de datos.
 
     **`ATENCIÓN: ESTE PROCESO BORRA LOS DATOS PREVIOS EN LA BASE DE DATOS.`**

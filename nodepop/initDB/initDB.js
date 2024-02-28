@@ -186,7 +186,7 @@ async function initAd() {
                 photo: 'sonic_the_hedgehog.jpg',
                 tags: ['lifestyle'],
             },
-        ],
+        ]
 
     );
     console.log(`Se han creado ${insertAds.length} anuncios.`);
