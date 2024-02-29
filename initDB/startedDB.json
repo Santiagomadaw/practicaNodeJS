@@ -1,192 +1,177 @@
 [
     {
-        "nombre": "Cámara clásica Nikon F3",
-        "venta": true,
-        "precio": 350,
-        "foto": "nikon_f3.jpg",
-        "tags": [
-            "work",
-            "lifestyle"
-        ]
+        "name": "Cámara clásica Nikon F3",
+        "sell": true,
+        "price": 350,
+        "photo": "Nikon_F3.png",
+        "tags": ["work", "lifestyle"]
     },
     {
-        "nombre": "Teléfono móvil Nokia 3310",
-        "venta": false,
-        "precio": 50,
-        "foto": "nokia_3310.jpg",
-        "tags": [
-            "mobile",
-            "lifestyle"
-        ]
+        "name": "Teléfono móvil Nokia 3310",
+        "sell": false,
+        "price": 50,
+        "photo": "nokia_3310.jpg",
+        "tags": ["mobile", "lifestyle"]
     },
     {
-        "nombre": "Consola clásica Nintendo Entertainment System (NES)",
-        "venta": true,
-        "precio": 200,
-        "foto": "nes.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Moto vintage - Harley-Davidson Sportster",
+        "sell": true,
+        "price": 12000,
+        "photo": "harley_davidson_sportster.jpg",
+        "tags": ["motor", "lifestyle"]
     },
     {
-        "nombre": "Juego Super Mario Bros",
-        "venta": true,
-        "precio": 30,
-        "foto": "super_mario_bros.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Consola clásica Nintendo (NES)",
+        "sell": true,
+        "price": 200,
+        "photo": "nes.jpg",
+        "tags": ["lifestyle"]
     },
     {
-        "nombre": "Cámara clásica Leica M3",
-        "venta": true,
-        "precio": 1200,
-        "foto": "leica_m3.jpg",
-        "tags": [
-            "work",
-            "lifestyle"
-        ]
+        "name": "Coche clásico - Volkswagen Beetle",
+        "sell": true,
+        "price": 15000,
+        "photo": "volkswagen_beetle.jpg",
+        "tags": ["motor", "lifestyle"]
     },
     {
-        "nombre": "Teléfono móvil Motorola Razr V3",
-        "venta": false,
-        "precio": 80,
-        "foto": "motorola_razr_v3.jpg",
-        "tags": [
-            "mobile",
-            "lifestyle"
-        ]
+        "name": "Juego Super Mario Bros",
+        "sell": true,
+        "price": 30,
+        "photo": "super_mario_bros.jpg",
+        "tags": ["lifestyle"]
     },
     {
-        "nombre": "Consola clásica Atari 2600",
-        "venta": true,
-        "precio": 100,
-        "foto": "atari_2600.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Cámara clásica Leica M3",
+        "sell": true,
+        "price": 1200,
+        "photo": "leica_m3.jpg",
+        "tags": ["work", "lifestyle"]
     },
     {
-        "nombre": "Juego Pac-Man",
-        "venta": true,
-        "precio": 20,
-        "foto": "pacman.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Moto legendaria - Honda CB750",
+        "sell": true,
+        "price": 8000,
+        "photo": "honda_cb750.jpg",
+        "tags": ["motor", "lifestyle"]
     },
     {
-        "nombre": "Cámara clásica Canon AE-1",
-        "venta": true,
-        "precio": 250,
-        "foto": "canon_ae1.jpg",
-        "tags": [
-            "work",
-            "lifestyle"
-        ]
+        "name": "Teléfono móvil Motorola Razr V3",
+        "sell": false,
+        "price": 80,
+        "photo": "motorola_razr_v3.jpg",
+        "tags": ["mobile", "lifestyle"]
     },
     {
-        "nombre": "Teléfono móvil BlackBerry Curve 8520",
-        "venta": false,
-        "precio": 40,
-        "foto": "blackberry_curve_8520.jpg",
-        "tags": [
-            "mobile",
-            "work"
-        ]
+        "name": "Consola clásica Atari 2600",
+        "sell": true,
+        "price": 100,
+        "photo": "atari_2600.jpg",
+        "tags": ["lifestyle"]
     },
     {
-        "nombre": "Consola clásica Sega Mega Drive (Genesis)",
-        "venta": true,
-        "precio": 150,
-        "foto": "sega_mega_drive.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Coche clásico - Chevrolet Camaro",
+        "sell": false,
+        "price": 25000,
+        "photo": "chevrolet_camaro.jpg",
+        "tags": ["motor", "lifestyle"]
     },
     {
-        "nombre": "Juego The Legend of Zelda",
-        "venta": true,
-        "precio": 40,
-        "foto": "legend_of_zelda.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Juego Pac-Man PS1",
+        "sell": true,
+        "price": 20,
+        "photo": "pacman.jpg",
+        "tags": ["lifestyle"]
     },
     {
-        "nombre": "Cámara clásica Pentax K1000",
-        "venta": true,
-        "precio": 180,
-        "foto": "pentax_k1000.jpg",
-        "tags": [
-            "work",
-            "lifestyle"
-        ]
+        "name": "Cámara clásica Canon AE-1",
+        "sell": true,
+        "price": 250,
+        "photo": "canon_ae1.jpg",
+        "tags": ["work", "lifestyle"]
     },
     {
-        "nombre": "Teléfono móvil Sony Ericsson T610",
-        "venta": false,
-        "precio": 35,
-        "foto": "sony_ericsson_t610.jpg",
-        "tags": [
-            "mobile",
-            "lifestyle"
-        ]
+        "name": "Teléfono móvil BlackBerry Curve 8520",
+        "sell": false,
+        "price": 40,
+        "photo": "blackberry_curve_8520.jpg",
+        "tags": ["mobile", "work"]
     },
     {
-        "nombre": "Consola clásica Super Nintendo Entertainment System (SNES)",
-        "venta": true,
-        "precio": 180,
-        "foto": "snes.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Moto vintage - Triumph Bonneville",
+        "sell": false,
+        "price": 10000,
+        "photo": "triumph_bonneville.jpg",
+        "tags": ["motor", "lifestyle"]
     },
     {
-        "nombre": "Juego Tetris",
-        "venta": true,
-        "precio": 15,
-        "foto": "tetris.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Consola clásica Sega Mega Drive (Genesis)",
+        "sell": true,
+        "price": 150,
+        "photo": "sega_mega_drive.jpg",
+        "tags": ["lifestyle"]
     },
     {
-        "nombre": "Cámara clásica Minolta X-700",
-        "venta": true,
-        "precio": 300,
-        "foto": "minolta_x700.jpg",
-        "tags": [
-            "work",
-            "lifestyle"
-        ]
+        "name": "Juego The Legend of Zelda",
+        "sell": true,
+        "price": 40,
+        "photo": "legend_of_zelda.jpg",
+        "tags": ["lifestyle"]
     },
     {
-        "nombre": "Teléfono móvil Siemens S55",
-        "venta": false,
-        "precio": 25,
-        "foto": "siemens_s55.jpg",
-        "tags": [
-            "mobile",
-            "work"
-        ]
+        "name": "Cámara clásica Pentax K1000",
+        "sell": true,
+        "price": 180,
+        "photo": "pentax_k1000.jpg",
+        "tags": ["work", "lifestyle"]
     },
     {
-        "nombre": "Consola clásica PlayStation 1 (PS1)",
-        "venta": true,
-        "precio": 120,
-        "foto": "ps1.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Teléfono móvil Sony Ericsson T10s",
+        "sell": false,
+        "price": 35,
+        "photo": "sony_ericsson_t10s.jpg",
+        "tags": ["mobile", "lifestyle"]
     },
     {
-        "nombre": "Juego Sonic the Hedgehog",
-        "venta": true,
-        "precio": 25,
-        "foto": "sonic_the_hedgehog.jpg",
-        "tags": [
-            "lifestyle"
-        ]
+        "name": "Consola clásica Super Nintendo(SNES)",
+        "sell": true,
+        "price": 180,
+        "photo": "snes.jpg",
+        "tags": ["lifestyle"]
+    },
+    {
+        "name": "Juego Tetris",
+        "sell": true,
+        "price": 15,
+        "photo": "tetris.jpg",
+        "tags": ["lifestyle"]
+    },
+    {
+        "name": "Cámara clásica Minolta X-700",
+        "sell": true,
+        "price": 300,
+        "photo": "minolta_x700.jpg",
+        "tags": ["work", "lifestyle"]
+    },
+    {
+        "name": "Teléfono móvil Siemens S55",
+        "sell": false,
+        "price": 25,
+        "photo": "siemens_s55.jpg",
+        "tags": ["mobile", "work"]
+    },
+    {
+        "name": "Consola clásica PlayStation 1 (PS1)",
+        "sell": true,
+        "price": 120,
+        "photo": "ps1.jpg",
+        "tags": ["lifestyle"]
+    },
+    {
+        "name": "Juego Sonic the Hedgehog (Mega Drive)",
+        "sell": true,
+        "price": 25,
+        "photo": "sonic_the_hedgehog.jpg",
+        "tags": ["lifestyle"]
     }
 ]
