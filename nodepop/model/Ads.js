@@ -12,7 +12,7 @@ const adSchema = mongoose.Schema({
 });
 
 // metodo para mostrar los anuncios
-adSchema.statics.show = function(filter, start, step) {
+adSchema.statics.show = function(filter, start, step, sort) {
     const query = Ad.find(filter);
     if (start) {
         query.skip(start);
@@ -20,10 +20,12 @@ adSchema.statics.show = function(filter, start, step) {
     if (step) {
         query.limit(step);
     }
+    query.sort(sort);
     return query.exec();
 };
 
 adSchema.statics.filter = function(query) {
+    const sort = query.sort;
     const filterBySell = query.sell;
     const filterBytag = query.tags;
     const minprice = query.min;
@@ -65,7 +67,7 @@ adSchema.statics.filter = function(query) {
     if (filterBytag) {
         filter.tags = {$all:filterBytag};
     }
-    return Ad.show(filter, start, step);
+    return Ad.show(filter, start, step, sort);
 };
 
 // creo modelo anuncio

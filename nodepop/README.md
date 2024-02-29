@@ -6,8 +6,9 @@
 
 1. 💻 Clona este repositorio en tu máquina local.
 2. 👨‍💻 Instala las dependencias utilizando `npm install`.
-3. 📄 Configura la conexión a tu base de datos `MongoDB`.
-    'mongodb://127.0.0.1:27017/'
+3. 📄 Configura la conexión a tu base de datos `MongoDB`:
+
+        `mongodb://127.0.0.1:27017/`
 4. 🏃‍♂️ Ejecuta el servidor con `npm run initDB` para inicializar la base de datos.
 
     **`ATENCIÓN: ESTE PROCESO BORRA LOS DATOS PREVIOS EN LA BASE DE DATOS.`**
@@ -34,6 +35,7 @@ Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 - `tags` busqueda por tags (texto). Se puede usar varias veces (ej. ?tag=mobile&tag=work).
 - `tittleStart` Busca anuncios que empiezan por un determinado texto (texto).
 - `tittle` Busca anuncios que contienen un determinado texto (texto).
+- `sort` Ordena los anuncios. Campos de ordenación: 
 
 #### Paginaciòn
 
@@ -177,7 +179,7 @@ Modifica un anuncio pasando el id como parámetro
 > ```
 >  http://localhost:3000/api/anuncio/65dd20908de6e1742cab1ac4
 > ```
->![alt text](image.png)
+>![alt text](./readmeImages/image.png)
 
 #### Previo
 
@@ -236,7 +238,7 @@ Modifica un anuncio pasando el id como parámetro
 
 #### 🟢 Ejemplo
 
->![alt text](image-3.png)```
+>![alt text](./readmeImages/image-3.png)```
 
 ##### Code `422`
 
@@ -244,7 +246,7 @@ Modifica un anuncio pasando el id como parámetro
 
 >```json
 >{
->    "error": "Not valid - field price in body must be numeric"
+>    "error": "Not valid - field price in body debe ser un numero"
 >}
 >```
 
@@ -273,7 +275,7 @@ Este endpoint añade un nuevo anuncio siguiendo el siguiente esquema.
 #### 🟢 Ejemplo
 
 
->![alt text](image-1.png)
+>![alt text](./readmeImages/image-1.png)
 
 #### 🟢 Resultado
 
@@ -299,7 +301,7 @@ Este endpoint añade un nuevo anuncio siguiendo el siguiente esquema.
 >```
 #### 🟢 Ejemplo
 
->![alt text](image-4.png)
+>![alt text](./readmeImages/image-4.png)
 
 ##### Code `404`
 
@@ -313,7 +315,7 @@ Este endpoint añade un nuevo anuncio siguiendo el siguiente esquema.
 
 #### 🟢 Ejemplo
 
->![alt text](image-5.png)
+>![alt text](./readmeImages/image-5.png)
 
 ##### Code `422`
 
@@ -321,7 +323,7 @@ Este endpoint añade un nuevo anuncio siguiendo el siguiente esquema.
 
 >```json
 >{
->    "error": "Not valid - field price in body must be numeric"
+>    "error": "Not valid - field price in body debe ser un numero"
 >}
 >```
 
@@ -335,7 +337,7 @@ Elimina un anuncio de la base de datos recibiendo por parametro el id del anunci
 
 #### 🟢 Ejemplo
 
->![alt text](image-2.png)
+>![alt text](./readmeImages/image-2.png)
 
 #### 🟢 Resultado
 
@@ -379,7 +381,7 @@ Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 
 ###### Consulta realizada con exito
 
->![alt text](image-6.png)
+>![alt text](./readmeImages/image-6.png)
 
 
 #### 🟢 Ejemplo
@@ -392,7 +394,7 @@ Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 
 ###### No encontrado
 
->![alt text](image-8.png)
+>![alt text](./readmeImages/image-8.png)
 
 #### 🟢 Ejemplo
 
@@ -404,6 +406,6 @@ Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 
 ###### Error de validación
 
->![alt text](image-7.png)
+>![alt text](./readmeImages/image-7.png)
 
 </details>

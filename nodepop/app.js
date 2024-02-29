@@ -44,7 +44,7 @@ app.use((err, req, res, next) => {
     // Errores de validación
     if (err.array) {
         const errInfo = err.array({ })[0];
-        err.message = `Not valid - ${errInfo.type} ${errInfo.path} in ${errInfo.location} ${errInfo.msg}`;
+        err.message = `Not valid - ${errInfo.type} ${errInfo.path} en ${errInfo.location} ${errInfo.msg}`;
         err.status = 422;
     }
     // Si el fallo es de la API
