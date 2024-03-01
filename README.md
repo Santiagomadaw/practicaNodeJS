@@ -1,4 +1,4 @@
-## English
+<a name="English"></a>
 
 [Español](#Español)
 
@@ -411,7 +411,7 @@ Gets a list of ads filtered based on the given parameters.
 
 </details>
 
-## Español
+<a name="Español"></a>
 
 [English](#English)
 
