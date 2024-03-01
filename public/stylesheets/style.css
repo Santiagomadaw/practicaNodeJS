@@ -56,8 +56,11 @@ flex-direction: row;
 gap: 20px;
 margin-bottom: 5px;
 min-width: 300px;
+transition: .4s;
+
 &:hover{
-  transform: scale(1.05);
+  transform: scale(1.06);
+  ;
 }
 }
 .image{

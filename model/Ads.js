@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Defino el esquema de anuncios
+// Definución del esquema de anuncios
 const adSchema = mongoose.Schema({
     name: {type: String, required: true},
     sell: {type: Boolean, required: true},
@@ -11,7 +11,7 @@ const adSchema = mongoose.Schema({
     }},
 });
 
-// metodo para mostrar los anuncios
+// Método para mostrar los anuncios
 adSchema.statics.show = function(filter, start, step, sort) {
     const query = Ad.find(filter);
     if (start) {
@@ -24,6 +24,7 @@ adSchema.statics.show = function(filter, start, step, sort) {
     return query.exec();
 };
 
+// Método para capturar filtros para pasarlo al que muestra los anuncios
 adSchema.statics.filter = function(query) {
     const sort = query.sort;
     const filterBySell = query.sell;
