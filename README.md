@@ -9,6 +9,9 @@
 ## Facility
 
 1. 💻 Clone this repository to your local machine.
+
+    `git clone git@github.com:Santiagomadaw/practicaNodeJS.git`
+
 2. 👨‍💻 Install the dependencies using `npm install`.
 3. 📄 Configure the connection to your `MongoDB` database:
 
@@ -422,6 +425,9 @@ Gets a list of ads filtered based on the given parameters.
 ## Instalación
 
 1. 💻 Clona este repositorio en tu máquina local.
+
+    `git clone git@github.com:Santiagomadaw/practicaNodeJS.git`
+    
 2. 👨‍💻 Instala las dependencias utilizando `npm install`.
 3. 📄 Configura la conexión a tu base de datos `MongoDB`:
 
