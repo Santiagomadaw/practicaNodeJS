@@ -1,6 +1,11 @@
+/* This code snippet is defining a Mongoose schema for advertisements (anuncios in Spanish). It
+includes fields like name, sell (indicating if the item is for sale), price, photo, and tags. The
+tags field is an array of strings with specific values allowed ('lifestyle', 'mobile', 'motor',
+'work'). */
 const mongoose = require('mongoose');
 
-// Defino el esquema de anuncios
+/* This code snippet is defining a Mongoose schema for advertisements. It is specifying the structure
+of the data that will be stored in the MongoDB database for advertisements. */
 const adSchema = mongoose.Schema({
     name: {type: String, required: true},
     sell: {type: Boolean, required: true},
@@ -11,19 +16,9 @@ const adSchema = mongoose.Schema({
     }},
 });
 
-// metodo para mostrar los anuncios
-adSchema.statics.show = function(filter, start, step, sort) {
-    const query = Ad.find(filter);
-    if (start) {
-        query.skip(start);
-    }
-    if (step) {
-        query.limit(step);
-    }
-    query.sort(sort);
-    return query.exec();
-};
-
+/* This `adSchema.statics.filter` function is a static method defined on the `adSchema` schema. It is
+used to filter advertisements based on the provided query parameters. Here's a breakdown of what the
+function is doing: */
 adSchema.statics.filter = function(query) {
     const sort = query.sort;
     const filterBySell = query.sell;
@@ -35,22 +30,17 @@ adSchema.statics.filter = function(query) {
     const filterByNameStart = query.tittleStart;
     const {start} = query;
     const {step} = query;
-
     const filter = {};
-    // filtro por anuncios que incluyen en cualquier parte una
-    // determinada cadena de caracteres
+
     if (filterByName) {
         filter.name = new RegExp(`${filterByName}`, 'i');
     }
-    // filtro por anuncios que empiezan por una determinada cadena de caracteres
     if (filterByNameStart) {
         filter.name = new RegExp(`^${filterByNameStart}`, 'i');
     }
-    // filtro por tipo de anuncio compra o venta
     if (filterBySell) {
         filter.sell = filterBySell;
     }
-    // filtro por precio maximo y minimo
     if (minprice) {
         filter.price = {};
         filter.price.$gte = minprice;
@@ -59,16 +49,38 @@ adSchema.statics.filter = function(query) {
         filter.price = filter.price || {};
         filter.price.$lte = maxprice;
     }
-    // filtro por precio fijo
     if (filterByPrice) {
         filter.price = filterByPrice;
     }
-    // filtro por tags
     if (filterBytag) {
         filter.tags = {$all:filterBytag};
     }
-    return Ad.show(filter, start, step, sort);
+    return {filter, start, step, sort};
 };
+
+/* This `adSchema.statics.show` function is a static method defined on the `adSchema` schema. It is
+used to retrieve and display advertisements based on the provided query parameters. Here's a
+breakdown of what the function is doing: */
+
+
+adSchema.statics.show = function(query) {
+    const queriesfilter= Ad.filter(query);
+    const step = queriesfilter.step;
+    const sort = queriesfilter.sort;
+    const start = queriesfilter.start;
+    const filter = queriesfilter.filter;
+    const response = Ad.find(filter);
+
+    if (start) {
+        response.skip(start);
+    }
+    if (step) {
+        response.limit(step);
+    }
+    response.sort(sort);
+    return response.exec();
+};
+
 
 // creo modelo anuncio
 const Ad = mongoose.model('Ad', adSchema);
