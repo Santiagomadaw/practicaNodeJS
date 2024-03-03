@@ -20,13 +20,20 @@ const adSchema = mongoose.Schema({
 used to filter advertisements based on the provided query parameters. Here's a breakdown of what the
 function is doing: */
 adSchema.statics.filter = function(query) {
+    let minprice = undefined;
+    let maxprice = undefined;
+    let filterByPrice = undefined;
     const sort = query.sort;
     const filterBySell = query.sell;
     const filterBytag = query.tags;
-    const minprice = query.min;
-    const maxprice = query.max;
-    const filterByPrice = query.price;
     const filterByName = query.tittle;
+    
+    if (query.price.toString().includes('-')){
+        minprice = query.price.split('-')[0];
+        maxprice = query.price.split('-')[1];
+    }else{
+        filterByPrice = query.price;
+    }
     const filterByNameStart = query.tittleStart;
     const {start} = query;
     const {step} = query;

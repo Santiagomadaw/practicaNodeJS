@@ -4,7 +4,7 @@
  */
 const connection = require('../lib/connectMogoose');
 const Ad = require('../model/Ads');
-const data = require('./startedDB.json')
+const data = require('./startedDB.json');
 
 async function initAd() {
     /* The line `const del = await Ad.deleteMany();` is deleting all documents from the Ad collection
