@@ -41,7 +41,6 @@ app.use((req, res, next) => {
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
-    console.log('env',req.app.get('env'))
     /* This code snippet is checking if the error object has a property called `array`. If it does, it
     assumes that the error is related to validation. It then extracts information from the first
     element of the `array` property (assuming it's an array) and constructs a custom error message
@@ -49,7 +48,7 @@ app.use((err, req, res, next) => {
     status to 422, which typically represents a validation error. */
     if (err.array) {
         const errInfo = err.array({ })[0];
-        err.message = `Not valid - ${errInfo.type} ${errInfo.path} en ${errInfo.location} ${errInfo.msg}`;
+        err.message = `Not valid - ${errInfo.type} ${errInfo.path} in ${errInfo.location} ${errInfo.msg}`;
         err.status = 422;
     }
     
