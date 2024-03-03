@@ -7,6 +7,13 @@
         "tags": ["work", "lifestyle"]
     },
     {
+        "name": "Pensamiento profundo",
+        "sell": true,
+        "price": 42,
+        "photo": "42.png",
+        "tags": ["lifestyle"]
+    },
+    {
         "name": "Teléfono móvil Nokia 3310",
         "sell": false,
         "price": 50,

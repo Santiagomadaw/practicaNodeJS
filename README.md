@@ -35,7 +35,7 @@ Gets a list of ads filtered based on the given parameters.
 
 #### Query parameters
 
-- `price` Exact price sought (number) You can delimit the minimum and maximum values using a hyphen. `price=minprice-maxprice` or `price=minprice-` or `price=-maxprice`
+- `price` Exact price sought (number) You can delimit the minimum and maximum values using a hyphen. `price=minprice-maxprice` or `price=minprice-` or `price=-maxprice`(e.g. ?price=10-50)
 - `price` Exact price searched (number) you can del.
 - `sell` Buy or sell ad type (boolean).
 - `tags` search by tags (text). It can be used multiple times (e.g. ?tag=mobile&tag=work).
@@ -358,7 +358,7 @@ Gets a list of ads filtered based on the given parameters.
 
 #### Query parameters
 
-- `price` Exact price sought (number) You can delimit the minimum and maximum values using a hyphen. `price=minprice-maxprice` or `price=minprice-` or `price=-maxprice`
+- `price` Exact price sought (number) You can delimit the minimum and maximum values using a hyphen. `price=minprice-maxprice` or `price=minprice-` or `price=-maxprice`(e.g. ?price=10-50)
 - `sell` Buy or sell ad type (boolean).
 - `tags` search by tags (text). It can be used multiple times (e.g. ?tag=mobile&tag=work).
 - `tittleStart` Search for ads that start with a certain text (text).
@@ -448,7 +448,7 @@ Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 
 #### Parámetros de consulta
 
-- `price` Precio exacto buscado (numero)  Puedes delimitar el valor maximo y minimo usando un guion. `price=minprice-maxprice` o `price=minprice-` o `price=-maxprice`
+- `price` Precio exacto buscado (numero)  Puedes delimitar el valor maximo y minimo usando un guion. `price=minprice-maxprice` o `price=minprice-` o `price=-maxprice`(ejemplo ?price=10-50)
 - `sell` Tipo de anuncio  compra o venta (boolean).
 - `tags` busqueda por tags (texto). Se puede usar varias veces (ej. ?tag=mobile&tag=work).
 - `tittleStart` Busca anuncios que empiezan por un determinado texto (texto).
@@ -773,7 +773,7 @@ Obtiene una lista de anuncios filtrados según los parámetros proporcionados.
 
 #### Parámetros de consulta
 
-- `price` Precio exacto buscado (numero)  Puedes delimitar el valor maximo y minimo usando un guion. `price=minprice-maxprice` o `price=minprice-` o `price=-maxprice`
+- `price` Precio exacto buscado (numero)  Puedes delimitar el valor maximo y minimo usando un guion. `price=minprice-maxprice` o `price=minprice-` o `price=-maxprice`(ejemplo ?price=10-50)
 - `sell` Tipo de anuncio  compra o venta (boolean).
 - `tags` busqueda por tags (texto). Se puede usar varias veces (ej. ?tag=mobile&tag=work).
 - `tittleStart` Busca anuncios que empiezan por un determinado texto (texto).

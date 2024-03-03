@@ -7,19 +7,21 @@ const mongoose = require('mongoose');
 /* This code snippet is defining a Mongoose schema for advertisements. It is specifying the structure
 of the data that will be stored in the MongoDB database for advertisements. */
 const adSchema = mongoose.Schema({
-    name: {type: String, required: true},
-    sell: {type: Boolean, required: true},
-    price: {type: Number, required: true},
-    photo: {type: String, required: true},
-    tags: {type: [String], required: true, enum: {
-        values: ['lifestyle', 'mobile', 'motor', 'work'],
-    }},
+    name: { type: String, required: true },
+    sell: { type: Boolean, required: true },
+    price: { type: Number, required: true },
+    photo: { type: String, required: true },
+    tags: {
+        type: [String], required: true, enum: {
+            values: ['lifestyle', 'mobile', 'motor', 'work'],
+        }
+    },
 });
 
 /* This `adSchema.statics.filter` function is a static method defined on the `adSchema` schema. It is
 used to filter advertisements based on the provided query parameters. Here's a breakdown of what the
 function is doing: */
-adSchema.statics.filter = function(query) {
+adSchema.statics.filter = function (query) {
     let minprice = undefined;
     let maxprice = undefined;
     let filterByPrice = undefined;
@@ -27,16 +29,17 @@ adSchema.statics.filter = function(query) {
     const filterBySell = query.sell;
     const filterBytag = query.tags;
     const filterByName = query.tittle;
-    
-    if (query.price.toString().includes('-')){
-        minprice = query.price.split('-')[0];
-        maxprice = query.price.split('-')[1];
-    }else{
-        filterByPrice = query.price;
+    if (query.price) {
+        if (query.price.toString().includes('-')) {
+            minprice = query.price.split('-')[0];
+            maxprice = query.price.split('-')[1];
+        } else {
+            filterByPrice = query.price;
+        }
     }
     const filterByNameStart = query.tittleStart;
-    const {start} = query;
-    const {step} = query;
+    const { start } = query;
+    const { step } = query;
     const filter = {};
 
     if (filterByName) {
@@ -60,9 +63,9 @@ adSchema.statics.filter = function(query) {
         filter.price = filterByPrice;
     }
     if (filterBytag) {
-        filter.tags = {$all:filterBytag};
+        filter.tags = { $all: filterBytag };
     }
-    return {filter, start, step, sort};
+    return { filter, start, step, sort };
 };
 
 /* This `adSchema.statics.show` function is a static method defined on the `adSchema` schema. It is
@@ -70,8 +73,8 @@ used to retrieve and display advertisements based on the provided query paramete
 breakdown of what the function is doing: */
 
 
-adSchema.statics.show = function(query) {
-    const queriesfilter= Ad.filter(query);
+adSchema.statics.show = function (query) {
+    const queriesfilter = Ad.filter(query);
     const step = queriesfilter.step;
     const sort = queriesfilter.sort;
     const start = queriesfilter.start;
