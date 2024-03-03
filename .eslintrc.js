@@ -37,6 +37,35 @@ module.exports = {
         'semi': [
             'error',
             'always'
+        ],
+        'arrow-body-style': [
+            'error',
+            'as-needed'
+        ],
+        'prefer-arrow-callback': [
+            'error',
+            'always'
+        ],
+        'newline-before-return': [
+            'error',
+            'always'
+        ],
+        'object-curly-spacing': [
+            'error',
+            'always'
+        ],
+        'newline-after-var': [
+            'error',
+            'always'
+        ],
+        'array-bracket-spacing': [
+            'error',
+            'always'
+        ],
+        'space-before-function-paren': [
+            'error',
+            'always'
         ]
     }
+    
 };

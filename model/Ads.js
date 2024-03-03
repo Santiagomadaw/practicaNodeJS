@@ -12,8 +12,8 @@ const adSchema = mongoose.Schema({
     price: { type: Number, required: true },
     photo: { type: String, required: true },
     tags: {
-        type: [String], required: true, enum: {
-            values: ['lifestyle', 'mobile', 'motor', 'work'],
+        type: [ String ], required: true, enum: {
+            values: [ 'lifestyle', 'mobile', 'motor', 'work' ],
         }
     },
 });
@@ -29,6 +29,7 @@ adSchema.statics.filter = function (query) {
     const filterBySell = query.sell;
     const filterBytag = query.tags;
     const filterByName = query.tittle;
+
     if (query.price) {
         if (query.price.toString().includes('-')) {
             minprice = query.price.split('-')[0];
@@ -37,6 +38,7 @@ adSchema.statics.filter = function (query) {
             filterByPrice = query.price;
         }
     }
+    
     const filterByNameStart = query.tittleStart;
     const { start } = query;
     const { step } = query;
